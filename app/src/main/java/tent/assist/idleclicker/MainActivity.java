@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("PRD", Long.parseLong(period.getText().toString()));
         else {
             Toast.makeText(this, R.string.set_default, Toast.LENGTH_LONG).show();
-            intent.putExtra("PRD", (long)1000);
+            intent.putExtra("PRD", (long)500);
         }
         startActivity(intent);
     }
