@@ -3,7 +3,6 @@
     <string name="button">Tap here</string>
     <string name="button2">Tap to set results</string>
     <string name="back_button">Go back</string>
-    <string name="time_text">Time</string>
     <string name="real">Beats passed:</string>
     <string name="expected">Your beats:</string>
     <string name="choice">Choose time period (in bpm)</string>
