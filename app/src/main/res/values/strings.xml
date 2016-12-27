@@ -1,21 +1,25 @@
 <resources>
-    <string name="app_name">Sense of Rhythm Clicker</string>
+    <string name="app_name">Sense of Bar Clicker</string>
     <string name="button">Tap here</string>
     <string name="button2">Tap to set results</string>
     <string name="back_button">Go back</string>
-    <string name="time_enter">Enter the estimated playing time</string>
-    <string name="clicks_enter">Enter the estimated number of clicks</string>
     <string name="time_text">Time</string>
-    <string name="real">Time passed:</string>
-    <string name="expected">Your clicks:</string>
-    <string name="format_error">You have entered wrong value format (int, mm:ss)</string>
-    <string name="choice">Choose time period (in milliseconds)</string>
+    <string name="real">Beats passed:</string>
+    <string name="expected">Your beats:</string>
+    <string name="choice">Choose time period (in bpm)</string>
     <string name="apply">Apply</string>
-    <string name="set_default">Time period is 1 second by default</string>
+    <string name="set_default">Time period is 120 beats per minute by default</string>
     <string name="period">Time period equals</string>
-    <string name="intro">The game is supposed to improve your Sense of Rhythm™ by giving you an
-        opportunity to click once a period (which is not necessary).</string>
-    <string name="result_good">Congrats! Your Sense of Rhythm™ is in excellent condition!</string>
-    <string name="result_average">Train harder and improve your Sense of Rhythm™!</string>
-    <string name="result_bad">Your Sense of Rhythm™ leaves much to be desired.</string>
+    <string name="intro">The game is supposed to improve your Sense of Bar™ by giving you an opportunity to click once a period.
+        The game consists of three parts:\n
+        in the first part you assign a duration in beats per minutes(the default interval is 120 bpm (half a second));
+        \n
+        in the second part the game starts (click on the screen once per period), and ends by pressing the big red button;
+        \n
+        in the third part your results summarize. And remember: the longer you play, the more accurate your result.
+    </string>
+    <string name="bpm">bpm</string>
+    <string name="result_good">Congrats! Your Sense of Bar™ is in excellent condition!</string>
+    <string name="result_average">Train harder and improve your Sense of Bar™!</string>
+    <string name="result_bad">Your Sense of Bar™ leaves much to be desired.</string>
 </resources>
