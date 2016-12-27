@@ -20,7 +20,7 @@ public class Resulter extends AppCompatActivity{
 
         int counter = (int) getIntent().getSerializableExtra("CLK");
         int timePassed = (int) getIntent().getSerializableExtra("UOT");
-        long period = (long) getIntent().getSerializableExtra("PRD");
+        long period = 60000 / (long) getIntent().getSerializableExtra("PRD");
 
         String result;
 
@@ -38,8 +38,8 @@ public class Resulter extends AppCompatActivity{
             result = getString(R.string.result_bad);
         }
 
-        timeView.setText(String.format(Locale.getDefault(), "%s\n\n%s\t%s\n%s\t%s\n%s\t%s\n\n\n%s",
-                getText(R.string.time_text), getText(R.string.period), period, getText(R.string.real), timePassed, getText(R.string.expected), counter, result));
+        timeView.setText(String.format(Locale.getDefault(), "%s\n\n%s\t\t%s\t\t%s\n%s\t\t%s\n%s\t\t%s\n\n\n%s",
+                getText(R.string.time_text), getText(R.string.period), period, getText(R.string.bpm), getText(R.string.real), timePassed, getText(R.string.expected), counter, result));
     }
 
     public void getBack (View view) {
