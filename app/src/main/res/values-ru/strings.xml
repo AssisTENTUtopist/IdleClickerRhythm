@@ -5,7 +5,6 @@
     <string name="button2">Нажми, чтобы задать результаты</string>
     <string name="back_button">Вернуться</string>
     <string name="real">Ударов прошло:</string>
-    <string name="time_text">Время</string>
     <string name="choice">Выберите периодичность (в ударах в минуту)</string>
     <string name="apply">Подтвердить</string>
     <string name="set_default">Период времени - 120 ударов в минуту (полсекунды) по умолчанию</string>
