@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
     public void setPeriod (View view) {
         Intent intent = new Intent(this, Clicker.class);
         if (period.getText().toString().length()>0)
-            intent.putExtra("PRD", Long.parseLong(period.getText().toString()));
+            intent.putExtra("PRD", 60000/(Long.parseLong(period.getText().toString())));
         else {
             Toast.makeText(this, R.string.set_default, Toast.LENGTH_LONG).show();
-            intent.putExtra("PRD", (long)1000);
+            intent.putExtra("PRD", (long)500);
         }
         startActivity(intent);
     }
