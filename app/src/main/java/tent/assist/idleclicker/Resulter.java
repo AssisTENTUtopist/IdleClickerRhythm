@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -20,7 +21,7 @@ public class Resulter extends AppCompatActivity{
 
         int counter = (int) getIntent().getSerializableExtra("CLK");
         int timePassed = (int) getIntent().getSerializableExtra("UOT");
-        long period = (long) getIntent().getSerializableExtra("PRD");
+        long period = 60000 / (long) getIntent().getSerializableExtra("PRD");
 
         String result;
 
@@ -38,12 +39,23 @@ public class Resulter extends AppCompatActivity{
             result = getString(R.string.result_bad);
         }
 
-        timeView.setText(String.format(Locale.getDefault(), "%s\n\n%s\t%s\n%s\t%s\n%s\t%s\n\n\n%s",
-                getText(R.string.time_text), getText(R.string.period), period, getText(R.string.real), timePassed, getText(R.string.expected), counter, result));
+        timeView.setText(String.format(Locale.getDefault(), "%s\t\t%s\t\t%s\n%s\t\t%s\n%s\t\t%s\n\n\n%s",
+                getText(R.string.period), period, getText(R.string.bpm), getText(R.string.real), timePassed, getText(R.string.expected), counter, result));
     }
 
-    public void getBack (View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void gottaGetBack(View view) {
+        Intent intent = new Intent(this, SenseOfBarMainActivity.class);
         startActivity(intent);
     }
+
+    public void backToThePast(View view) {
+        Intent intent = new Intent(this, MainMainActivity.class);
+        startActivity(intent);
+    }
+
+    /*
+    public void samuraiJack(View view) {
+        Toast.makeText(this, "Dab", Toast.LENGTH_SHORT).show();
+    }
+    */
 }

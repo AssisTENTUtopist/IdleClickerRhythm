@@ -5,13 +5,23 @@
                 android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="backToThePast"
+        android:text="Button" />
+
+    <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="getBack"
+            android:onClick="gottaGetBack"
             android:text="@string/back_button"
             android:id="@+id/back_button" android:layout_gravity="center_horizontal"
-            android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        android:layout_above="@+id/button5"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
