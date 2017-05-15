@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Handler Kit</string>
     <string name="sense_of_bar_name">Sense of Bar Clicker</string>
+    <string name="speed_reaction_name">Speed Reaction Test</string>
     <string name="button">Tap here</string>
     <string name="button2">Tap to set results</string>
     <string name="back_button">Go back</string>

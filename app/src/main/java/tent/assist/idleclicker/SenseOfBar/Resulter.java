@@ -1,19 +1,21 @@
-package tent.assist.idleclicker;
+package tent.assist.idleclicker.SenseOfBar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Locale;
+
+import tent.assist.idleclicker.MainMainActivity;
+import tent.assist.idleclicker.R;
 
 public class Resulter extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_sense_of_bar_result);
 
         TextView timeView;
 
@@ -44,7 +46,7 @@ public class Resulter extends AppCompatActivity{
     }
 
     public void gottaGetBack(View view) {
-        Intent intent = new Intent(this, SenseOfBarMainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

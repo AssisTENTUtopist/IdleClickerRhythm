@@ -17,13 +17,24 @@
         </activity>
         <activity
             android:label="@string/sense_of_bar_name"
-            android:name=".SenseOfBarMainActivity">
+            android:name=".SenseOfBar.MainActivity">
         </activity>
         <activity
-            android:name=".Clicker">
+            android:label="@string/sense_of_bar_name"
+            android:name=".SenseOfBar.Clicker">
         </activity>
         <activity
-            android:name=".Resulter">
+            android:label="@string/sense_of_bar_name"
+            android:name=".SenseOfBar.Resulter">
+        </activity>
+        <activity
+            android:name=".SpeedReaction.MainActivity">
+        </activity>
+        <activity
+            android:name=".SpeedReaction.Clicker">
+        </activity>
+        <activity
+            android:name=".SpeedReaction.Resulter">
         </activity>
     </application>
 

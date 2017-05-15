@@ -1,4 +1,4 @@
-package tent.assist.idleclicker;
+package tent.assist.idleclicker.SenseOfBar;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import tent.assist.idleclicker.MainMainActivity;
+import tent.assist.idleclicker.R;
+
 public class Clicker extends AppCompatActivity {
-    final int ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING = 42;
     Button butt;
     int counter = 0;
     int unitOfTime = 0;
@@ -25,7 +27,7 @@ public class Clicker extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_clicker);
+        setContentView(R.layout.activity_sense_of_bar_clicker);
         butt = (Button) findViewById(R.id.button);
 
         View.OnClickListener buttSlap = new View.OnClickListener() {
@@ -38,7 +40,7 @@ public class Clicker extends AppCompatActivity {
         new Thread() {
             public void run() {
                 period = (long) getIntent().getSerializableExtra("PRD");
-                while (ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING == 42) {
+                while (MainMainActivity.ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING == 42) {
                     unitOfTime++;
                     try {
                         Thread.sleep(period);

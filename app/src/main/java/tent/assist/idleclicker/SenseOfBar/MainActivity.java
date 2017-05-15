@@ -1,4 +1,4 @@
-package tent.assist.idleclicker;
+package tent.assist.idleclicker.SenseOfBar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,13 +7,15 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SenseOfBarMainActivity extends AppCompatActivity {
+import tent.assist.idleclicker.R;
+
+public class MainActivity extends AppCompatActivity {
     EditText period;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sense_of_bar_main);
         period = (EditText) findViewById(R.id.editPeriodText);
     }
 
