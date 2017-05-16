@@ -2,7 +2,8 @@
 <resources>
     <string name="button">Нажимай сюда</string>
     <string name="button2">Нажми, чтобы задать результаты</string>
-    <string name="back_button">Вернуться</string>
+    <string name="gotta_get_back_button">Повторить?</string>
+    <string name="back_to_the_past_button">Вернуться?</string>
     <string name="real">Ударов прошло:</string>
     <string name="choice">Выберите периодичность (в ударах в минуту)</string>
     <string name="apply">Подтвердить</string>
@@ -23,4 +24,8 @@
     <string name="sense_of_bar_name">Кликер Чувства Такта</string>
     <string name="app_name">Комплект Дрессировщика</string>
     <string name="speed_reaction_name">Тест Скорости Реакции</string>
+    <string name="ss_ms">секунд:миллисекунд</string>
+    <string name="best_time">Лучшее время:</string>
+    <string name="average_time">Среднее время:</string>
+    <string name="introduction">Выберите игру</string>
 </resources>

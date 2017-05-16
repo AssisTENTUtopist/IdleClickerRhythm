@@ -1,4 +1,4 @@
-package tent.assist.idleclicker.SenseOfBar;
+package tent.assist.idleclicker.senseOfBar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ public class Resulter extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sense_of_bar_result);
+        setContentView(R.layout.activity_sense_of_bar_resulter);
 
         TextView timeView;
 
@@ -27,7 +27,7 @@ public class Resulter extends AppCompatActivity{
 
         String result;
 
-        int residual = Math.abs(timePassed-counter);
+        int residual = Math.abs(timePassed - counter);
         if (residual<10) {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorVeryClose));
             result = getString(R.string.result_good);

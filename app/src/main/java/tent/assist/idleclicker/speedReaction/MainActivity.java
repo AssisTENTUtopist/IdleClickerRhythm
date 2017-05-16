@@ -1,4 +1,4 @@
-package tent.assist.idleclicker.SenseOfBar;
+package tent.assist.idleclicker.speedReaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,22 +10,21 @@ import android.widget.Toast;
 import tent.assist.idleclicker.R;
 
 public class MainActivity extends AppCompatActivity {
-    EditText period;
+    EditText attempts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sense_of_bar_main);
-        period = (EditText) findViewById(R.id.editPeriodText);
+        setContentView(R.layout.activity_speed_reaction_main);
+        attempts = (EditText) findViewById(R.id.editAttempts);
     }
 
-    public void setPeriod (View view) {
+    public void setAttempts (View view) {
         Intent intent = new Intent(this, Clicker.class);
-        if (period.getText().toString().length()>0)
-            intent.putExtra("PRD", 60000/(Long.parseLong(period.getText().toString())));
+        if (attempts.getText().toString().length()>0)
+            intent.putExtra("ATM", Integer.parseInt(attempts.getText().toString()));
         else {
-            Toast.makeText(this, R.string.set_default, Toast.LENGTH_LONG).show();
-            intent.putExtra("PRD", (long)500);
+            intent.putExtra("ATM", 1);
         }
         startActivity(intent);
     }

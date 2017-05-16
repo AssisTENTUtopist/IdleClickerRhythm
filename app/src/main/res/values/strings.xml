@@ -4,7 +4,8 @@
     <string name="speed_reaction_name">Speed Reaction Test</string>
     <string name="button">Tap here</string>
     <string name="button2">Tap to set results</string>
-    <string name="back_button">Go back</string>
+    <string name="gotta_get_back_button">Repeat?</string>
+    <string name="back_to_the_past_button">Get back?</string>
     <string name="real">Beats passed:</string>
     <string name="expected">Your beats:</string>
     <string name="choice">Choose time period (in bpm)</string>
@@ -23,4 +24,8 @@
     <string name="result_good">Congrats! Your Sense of Bar™ is in excellent condition!</string>
     <string name="result_average">Train harder and improve your Sense of Bar™!</string>
     <string name="result_bad">Your Sense of Bar™ leaves much to be desired.</string>
+    <string name="ss_ms">seconds:milliseconds</string>
+    <string name="best_time">Best time:</string>
+    <string name="average_time">Average time:</string>
+    <string name="introduction">Choose the game</string>
 </resources>
