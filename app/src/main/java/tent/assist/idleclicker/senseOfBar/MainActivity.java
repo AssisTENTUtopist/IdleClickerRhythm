@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         if (period.getText().toString().length()>0)
             intent.putExtra("PRD", 60000/(Long.parseLong(period.getText().toString())));
         else {
-            Toast.makeText(this, R.string.set_default, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.set_default_time_period, Toast.LENGTH_LONG).show();
             intent.putExtra("PRD", (long)500);
         }
         startActivity(intent);

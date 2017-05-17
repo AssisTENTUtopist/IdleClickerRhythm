@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import tent.assist.idleclicker.MainMainActivity;
-
 import static tent.assist.idleclicker.R.*;
 import static tent.assist.idleclicker.R.color.*;
 
@@ -46,6 +44,7 @@ public class Clicker extends AppCompatActivity {
                     speedReactionTimes[attempts] = speedReactionTime;
                     butt.setBackgroundColor(getResources().getColor(colorVeryClose));
                     if (attempts < 1) setResults(v);
+                    else butt.setText(string.wait);
                 }
             }
         };
@@ -65,6 +64,7 @@ public class Clicker extends AppCompatActivity {
                             @Override
                             public void run() {
                                 butt.setBackgroundColor(getResources().getColor(colorTooFar));
+                                butt.setText(string.tap_button);
                             }
                         });
                         speedReactionTime = SystemClock.elapsedRealtime();

@@ -30,19 +30,19 @@ public class Resulter extends AppCompatActivity{
         int residual = Math.abs(timePassed - counter);
         if (residual<10) {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorVeryClose));
-            result = getString(R.string.result_good);
+            result = getString(R.string.sense_of_bar_result_good);
         }
         else if (residual<30) {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorAverageDistance));
-            result = getString(R.string.result_average);
+            result = getString(R.string.sense_of_bar_result_average);
         }
         else {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorTooFar));
-            result = getString(R.string.result_bad);
+            result = getString(R.string.sense_of_bar_result_bad);
         }
 
         timeView.setText(String.format(Locale.getDefault(), "%s\t\t%s\t\t%s\n%s\t\t%s\n%s\t\t%s\n\n\n%s",
-                getText(R.string.period), period, getText(R.string.bpm), getText(R.string.real), timePassed, getText(R.string.expected), counter, result));
+                getText(R.string.period), period, getText(R.string.bpm), getText(R.string.real_beats), timePassed, getText(R.string.expected_beats), counter, result));
     }
 
     public void gottaGetBack(View view) {

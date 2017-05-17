@@ -2,17 +2,17 @@
     <string name="app_name">Handler Kit</string>
     <string name="sense_of_bar_name">Sense of Bar Clicker</string>
     <string name="speed_reaction_name">Speed Reaction Test</string>
-    <string name="button">Tap here</string>
-    <string name="button2">Tap to set results</string>
+    <string name="tap_button">Tap</string>
+    <string name="set_results_button">Tap to set results</string>
     <string name="gotta_get_back_button">Repeat?</string>
     <string name="back_to_the_past_button">Get back?</string>
-    <string name="real">Beats passed:</string>
-    <string name="expected">Your beats:</string>
-    <string name="choice">Choose time period (in bpm)</string>
+    <string name="real_beats">Beats passed:</string>
+    <string name="expected_beats">Your beats:</string>
+    <string name="set_time_period_hint">Set time period (in bpm)</string>
     <string name="apply">Apply</string>
-    <string name="set_default">Time period is 120 beats per minute by default</string>
+    <string name="set_default_time_period">Time period is 120 beats per minute by default</string>
     <string name="period">Time period equals</string>
-    <string name="intro">The game is supposed to improve your Sense of Bar™ by giving you an opportunity to click once a period.
+    <string name="sense_of_bar_intro">The game is supposed to improve your Sense of Bar™ by giving you an opportunity to click once a period.
         The game consists of three parts:\n
         in the first part you assign a duration in beats per minutes(the default interval is 120 bpm (half a second));
         \n
@@ -21,11 +21,15 @@
         in the third part your results summarize. And remember: the longer you play, the more accurate your result.
     </string>
     <string name="bpm">bpm</string>
-    <string name="result_good">Congrats! Your Sense of Bar™ is in excellent condition!</string>
-    <string name="result_average">Train harder and improve your Sense of Bar™!</string>
-    <string name="result_bad">Your Sense of Bar™ leaves much to be desired.</string>
+    <string name="sense_of_bar_result_good">Congrats! Your Sense of Bar™ is in excellent condition!</string>
+    <string name="sense_of_bar_result_average">Train harder and improve your Sense of Bar™!</string>
+    <string name="sense_of_bar_result_bad">Your Sense of Bar™ leaves much to be desired.</string>
     <string name="ss_ms">seconds:milliseconds</string>
     <string name="best_time">Best time:</string>
     <string name="average_time">Average time:</string>
     <string name="introduction">Choose the game</string>
+    <string name="wait">Wait</string>
+    <string name="whack_a_mole_name">Whack-a-Mole</string>
+    <string name="set_duration_hint">Set duration (in seconds)</string>
+    <string name="set_tries">Set amount of tries</string>
 </resources>

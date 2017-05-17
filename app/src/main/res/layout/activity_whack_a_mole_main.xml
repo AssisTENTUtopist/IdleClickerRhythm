@@ -3,13 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editPeriodText"
-        android:hint="@string/set_time_period_hint" />
+        android:text="" />
 
     <EditText
         android:id="@+id/editDurationText"
@@ -20,18 +18,10 @@
         android:inputType="number" />
 
     <Button
-        android:id="@+id/apply"
+        android:id="@+id/button3"
         style="@android:style/Widget.Button.Inset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="setPeriod"
+        android:onClick="setDuration"
         android:text="@string/apply" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:text="@string/sense_of_bar_intro"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 </LinearLayout>

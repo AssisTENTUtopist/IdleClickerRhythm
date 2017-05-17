@@ -40,6 +40,18 @@
             android:label="@string/speed_reaction_name"
             android:name=".speedReaction.Resulter">
         </activity>
+        <activity
+            android:label="@string/whack_a_mole_name"
+            android:name=".whackAMole.MainActivity">
+        </activity>
+        <activity
+            android:label="@string/whack_a_mole_name"
+            android:name=".whackAMole.Clicker">
+        </activity>
+        <activity
+            android:label="@string/whack_a_mole_name"
+            android:name=".whackAMole.Resulter">
+        </activity>
     </application>
 
 </manifest>

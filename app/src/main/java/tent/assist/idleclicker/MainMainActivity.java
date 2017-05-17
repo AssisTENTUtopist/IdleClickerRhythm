@@ -42,4 +42,9 @@ public class MainMainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void startWhackAMoleGame(View view) {
+        Intent intent = new Intent(this, tent.assist.idleclicker.whackAMole.MainActivity.class);
+        startActivity(intent);
+    }
 }
