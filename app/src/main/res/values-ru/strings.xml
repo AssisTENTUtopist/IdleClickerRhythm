@@ -32,4 +32,5 @@
     <string name="whack_a_mole_name">Прибей Крота</string>
     <string name="set_duration_hint">Задайте продолжительность (в секундах)</string>
     <string name="set_tries">Задайте количество попыток</string>
+    <string name="set_moles_hint">Задайте количество кротов (от 3 до 12)</string>
 </resources>

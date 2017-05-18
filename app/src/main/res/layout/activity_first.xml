@@ -13,13 +13,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:text=""
+            android:drawableEnd="@mipmap/ic_launcher"
+            android:drawableRight="@mipmap/ic_launcher" />
 
     </LinearLayout>
 

@@ -12,18 +12,20 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:onClick="backToThePast"
-        android:text="@string/back_to_the_past_button" />
+        android:text="@string/back_to_the_past_button"
+        android:typeface="serif" />
 
     <Button
         android:id="@+id/gotta_get_back_button"
         style="@android:style/Widget.DeviceDefault.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/back_to_the_past_button"
-        android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:onClick="gottaGetBack"
-        android:text="@string/gotta_get_back_button" />
+        android:text="@string/gotta_get_back_button"
+        android:typeface="serif"
+        android:layout_above="@+id/back_to_the_past_button"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/timeView"
@@ -36,6 +38,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="tent.assist.idleclicker">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="tent.assist.idleclicker">
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,8 @@
         <activity android:name=".MainMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="https://github.com/AssisTENTUtopist"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

@@ -11,8 +11,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
         android:onClick="backToThePast"
-        android:text="@string/back_to_the_past_button" />
+        android:text="@string/back_to_the_past_button"
+        android:textAllCaps="true" />
 
     <Button
         android:id="@+id/gotta_get_back_button"
@@ -22,8 +24,10 @@
         android:layout_above="@+id/back_to_the_past_button"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
         android:onClick="gottaGetBack"
-        android:text="@string/gotta_get_back_button" />
+        android:text="@string/gotta_get_back_button"
+        android:textAllCaps="true" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="serif"
                 android:text="Large Text"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
         </LinearLayout>

@@ -4,22 +4,11 @@
                 android:layout_height="match_parent">
 
     <Button
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="@string/tap_button"
-            android:id="@+id/button"
-            android:background="@color/colorAccent" android:layout_above="@+id/linearLayout"
-            android:layout_alignParentTop="true"/>
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                  android:orientation="vertical" android:layout_alignParentBottom="true"
-                  android:layout_alignParentLeft="true" android:layout_alignParentStart="true"
-                  android:id="@+id/linearLayout">
-
-        <Button
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/set_results_button"
-                android:onClick="setResults"
-                android:id="@+id/button2" android:background="@color/colorTooFar"/>
-    </LinearLayout>
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorAccent"
+        android:text="@string/tap_button"
+        android:textSize="42sp" />
 </RelativeLayout>

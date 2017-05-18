@@ -4,12 +4,14 @@
     android:layout_height="match_parent">
 
     <EditText
+        android:id="@+id/editPeriodText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
         android:ems="10"
-        android:id="@+id/editPeriodText"
-        android:hint="@string/set_time_period_hint" />
+        android:hint="@string/set_time_period_hint"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic" />
 
     <EditText
         android:id="@+id/editDurationText"
@@ -17,21 +19,28 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/set_duration_hint"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/apply"
         style="@android:style/Widget.Button.Inset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="setPeriod"
-        android:text="@string/apply" />
+        android:fontFamily="serif"
+        android:onClick="setPeriodAndDuration"
+        android:text="@string/apply"
+        android:textSize="19sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:fontFamily="casual"
         android:text="@string/sense_of_bar_intro"
+        android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 </LinearLayout>
