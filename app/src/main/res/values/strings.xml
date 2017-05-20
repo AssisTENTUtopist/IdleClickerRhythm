@@ -33,4 +33,7 @@
     <string name="set_duration_hint">Set duration (in seconds)</string>
     <string name="set_tries">Set amount of tries</string>
     <string name="set_moles_hint">Set amount of moles (3 to 12)</string>
+    <string name="preferences_duration" translatable="false">DURATION</string>
+    <string name="preferences" translatable="false">PREFERENCES</string>
+    <string name="preferences_counter" translatable="false">COUNTER</string>
 </resources>

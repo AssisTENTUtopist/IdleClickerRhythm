@@ -2,6 +2,7 @@ package tent.assist.idleclicker.whackAMole;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -18,6 +19,7 @@ import android.view.WindowManager;
 import tent.assist.idleclicker.R;
 
 class ClickerView extends View {
+    private SharedPreferences sharedPref;
     private Sprite[] mole;
 
     private int currentMole, duration, counter;
@@ -28,7 +30,11 @@ class ClickerView extends View {
 
     public ClickerView(Context context) {
         super(context);
-        duration = 10000;
+        sharedPref = context.getSharedPreferences(
+                context.getString(R.string.preferences), Context.MODE_PRIVATE);
+        int defaultValue = 10000;
+        duration = sharedPref.getInt(context.getString(R.string.preferences_duration), defaultValue);
+
         WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         Display display = wm.getDefaultDisplay();
         Point size = new Point();
@@ -107,7 +113,9 @@ class ClickerView extends View {
         @Override
         public void onFinish() {
             Intent intent = new Intent(getContext(), Resulter.class);
-            intent.putExtra("CNT", counter);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putInt(getContext().getString(R.string.preferences_counter), counter);
+            editor.apply();
             getContext().startActivity(intent);
         }
     }

@@ -1,6 +1,7 @@
 package tent.assist.idleclicker.whackAMole;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +16,15 @@ public class Resulter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_whack_a_mole_resulter);
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preferences), MODE_PRIVATE);
 
         TextView counterView = (TextView) findViewById(R.id.counterView);
-        counterView.setText((int) getIntent().getSerializableExtra("CNT"));
+        int defaultValue = 0;
+        int counter = sharedPref.getInt(getString(R.string.preferences_counter), defaultValue);
+        defaultValue = 10000;
+        int duration = sharedPref.getInt(getString(R.string.preferences_duration), defaultValue);
+        counterView.setText(String.valueOf(counter));
     }
 
     public void gottaGetBack(View view) {
