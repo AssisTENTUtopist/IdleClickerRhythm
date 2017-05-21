@@ -18,15 +18,30 @@ public class MainMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         info = (TextView) findViewById(R.id.textView2);
-        butts = new Button[2];
+        butts = new Button[3];
         butts[0] = (Button) findViewById(R.id.sense_of_bar_button);
         butts[1] = (Button) findViewById(R.id.speed_reaction_button);
+        butts[2] = (Button) findViewById(R.id.whack_a_mole_button);
+        String intro = getString(R.string.introduction);
+        info.setText(intro);
 
-        for (final Button butt : butts) {
-            butt.setOnLongClickListener(new View.OnLongClickListener() {
+        for (int i = 0; i < butts.length; i++) {
+            switch (i) {
+                case 0:
+                    intro = getString(R.string.sense_of_bar_intro);
+                    break;
+                case 1:
+                    intro = getString(R.string.speed_reaction_intro);
+                    break;
+                case 2:
+                    intro = getString(R.string.whack_a_mole_intro);
+                    break;
+            }
+            final String finalIntro = intro;
+            butts[i].setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    info.setText(R.string.introduction);
+                    info.setText(finalIntro);
                     return false;
                 }
             });

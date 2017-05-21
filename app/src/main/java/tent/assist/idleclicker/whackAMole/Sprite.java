@@ -87,13 +87,11 @@ class Sprite {
     void update (int ms) {
         timeForCurrentFrame += ms;
 
-        if (getCurrentFrame() == getFramesCount() - 1) this.frameTime = 2000;
-        else this.frameTime = 25;
-
-        if (timeForCurrentFrame >= frameTime) {
-            //if (currentFrame != frames.size() - 1)
+        if (currentFrame != frames.size() - 1) {
+            if (timeForCurrentFrame >= frameTime) {
                 currentFrame = (currentFrame + 1) % frames.size();
-            timeForCurrentFrame = timeForCurrentFrame - frameTime;
+                timeForCurrentFrame = timeForCurrentFrame - frameTime;
+            }
         }
     }
     void draw (Canvas canvas) {

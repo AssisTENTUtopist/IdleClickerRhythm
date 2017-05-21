@@ -1,6 +1,7 @@
 package tent.assist.idleclicker.speedReaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,7 +12,7 @@ import tent.assist.idleclicker.R;
 
 public class Resulter extends AppCompatActivity{
     private String getTime(long millis) {
-        return millis/1000 + ":" + millis%1000;
+        return millis/1000 + ":" + millis%1000/100 + "" + millis%100/10 + "" + millis%10;
     }
 
     @Override
@@ -33,8 +34,15 @@ public class Resulter extends AppCompatActivity{
             result = result + (i+1) + ")\t" + getTime(speedReactionTimes[i]) + "\n";
         }
 
-        result = result + "\n" + getString(R.string.best_time) + "\n" + getTime(speedReactionTimes[bestTimeId]) +
-                "\n\n" + getString(R.string.average_time) + "\n" + getTime(averageTime / speedReactionTimes.length);
+        SharedPreferences sharedPref = getSharedPreferences(
+                getString(R.string.preferences), MODE_PRIVATE);
+        long bestTimeEver = sharedPref.getLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId]);
+        if (bestTimeEver >= speedReactionTimes[bestTimeId])
+            sharedPref.edit().putLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId]).apply();
+
+        result = result + "\n" + getString(R.string.average_time) + "\n" + getTime(averageTime / speedReactionTimes.length) +
+                "\n\n" + getString(R.string.best_time) + "\n" + getTime(speedReactionTimes[bestTimeId]) +
+                "\n\n" + getString(R.string.best_time_record) + getTime(bestTimeEver);
 
         timeView.setText(result);
     }

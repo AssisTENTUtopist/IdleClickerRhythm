@@ -28,11 +28,11 @@ public class Resulter extends AppCompatActivity{
         String result;
 
         int residual = Math.abs(timePassed - counter);
-        if (residual<10) {
+        if (residual<5) {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorVeryClose));
             result = getString(R.string.sense_of_bar_result_good);
         }
-        else if (residual<30) {
+        else if (residual<10) {
             timeView.setBackgroundColor(getResources().getColor(R.color.colorAverageDistance));
             result = getString(R.string.sense_of_bar_result_average);
         }

@@ -24,8 +24,8 @@ class ClickerView extends View {
 
     private int currentMole, duration, counter;
 
-    private static final int molesAmount = 9;
-
+    private final int molesAmount = 9;
+    private final int molesWaitTime = 750;
     private final int timerInterval = 30;
 
     public ClickerView(Context context) {
@@ -74,7 +74,7 @@ class ClickerView extends View {
     protected void update () {
         mole[currentMole].update(timerInterval);
         if (mole[currentMole].getCurrentFrame() == mole[currentMole].getFramesCount() - 1
-                && mole[currentMole].getTimeForCurrentFrame() >= 500) {
+                && mole[currentMole].getTimeForCurrentFrame() >= molesWaitTime) {
             mole[currentMole].setTimeForCurrentFrame(0);
             mole[currentMole].setCurrentFrame(0);
             currentMole = (int) (Math.random() * molesAmount);
@@ -87,9 +87,9 @@ class ClickerView extends View {
         int eventAction = event.getAction();
         if (eventAction == MotionEvent.ACTION_DOWN)  {
             if (event.getY() < mole[currentMole].getY() + mole[currentMole].getFrameHeight() &&
-                    event.getY() > mole[currentMole].getY() - mole[currentMole].getFrameHeight() &&
+                    event.getY() > mole[currentMole].getY() &&
                     event.getX() < mole[currentMole].getX() + mole[currentMole].getFrameWidth() &&
-                    event.getX() > mole[currentMole].getX() - mole[currentMole].getFrameWidth()) {
+                    event.getX() > mole[currentMole].getX()) {
                 mole[currentMole].setTimeForCurrentFrame(0);
                 mole[currentMole].setCurrentFrame(0);
                 currentMole = (int) (Math.random() * molesAmount);

@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 import tent.assist.idleclicker.MainMainActivity;
 import tent.assist.idleclicker.R;
 
@@ -23,8 +25,15 @@ public class Resulter extends AppCompatActivity {
         int defaultValue = 0;
         int counter = sharedPref.getInt(getString(R.string.preferences_counter), defaultValue);
         defaultValue = 10000;
-        int duration = sharedPref.getInt(getString(R.string.preferences_duration), defaultValue);
-        counterView.setText(String.valueOf(counter));
+        int duration = sharedPref.getInt(getString(R.string.preferences_duration), defaultValue) / 1000;
+        float defaultFloatValue = (float)counter/duration;
+        if (sharedPref.getFloat(getString(R.string.preferences_best_moles), defaultFloatValue) <= defaultFloatValue)
+            sharedPref.edit().putFloat(getString(R.string.preferences_best_moles), defaultFloatValue).apply();
+
+        counterView.setText(String.format(Locale.getDefault(), "%s\t\t%s\n\n%s\t\t%s\n\n%s\t\t%s\n\n%s\t\t%s",
+                getString(R.string.moles_hit_counter), counter, getString(R.string.moles_duration), duration,
+                getString(R.string.moles_per_second), defaultFloatValue, getString(R.string.best_moles_per_second),
+                sharedPref.getFloat(getString(R.string.preferences_best_moles), defaultFloatValue)));
     }
 
     public void gottaGetBack(View view) {

@@ -21,9 +21,9 @@
         in the third part your results summarize. And remember: the longer you play, the more accurate your result.
     </string>
     <string name="bpm">bpm</string>
-    <string name="sense_of_bar_result_good">Congrats! Your Sense of Bar™ is in excellent condition!</string>
-    <string name="sense_of_bar_result_average">Train harder and improve your Sense of Bar™!</string>
-    <string name="sense_of_bar_result_bad">Your Sense of Bar™ leaves much to be desired.</string>
+    <string name="sense_of_bar_result_good">Congrats! Your Sense of Bar™ is in excellent condition! We recommend to play with another time period.</string>
+    <string name="sense_of_bar_result_average">Train harder and improve your Sense of Bar™! Try again.</string>
+    <string name="sense_of_bar_result_bad">Your Sense of Bar™ leaves much to be desired. Try to set duration to lower number.</string>
     <string name="ss_ms">seconds:milliseconds</string>
     <string name="best_time">Best time:</string>
     <string name="average_time">Average time:</string>
@@ -36,4 +36,27 @@
     <string name="preferences_duration" translatable="false">DURATION</string>
     <string name="preferences" translatable="false">PREFERENCES</string>
     <string name="preferences_counter" translatable="false">COUNTER</string>
+    <string name="speed_reaction_intro">The game is supposed to improve your speed reaction by giving you an opportunity to click on screen.
+        The game consists of three parts:\n
+        in the first part you assign amount of tries (the default value is 1);
+        \n
+        in the second part the game starts (click on the screen when it is red);
+        \n
+        in the third part your results summarize.
+    </string>
+    <string name="whack_a_mole_intro">This famous game is supposed to improve your speed reaction and bullseye.
+        The game consists of three parts:\n
+        in the first part you assign duration in seconds (the default value is 10 seconds);
+        \n
+        in the second part the game starts (whack a mole);
+        \n
+        in the third part your hits summarize.
+    </string>
+    <string name="moles_hit_counter">Hits to the moles:</string>
+    <string name="moles_duration">Seconds passed:</string>
+    <string name="moles_per_second">Hits per second:</string>
+    <string name="preferences_best_moles" translatable="false">HITS PER SECOND</string>
+    <string name="best_moles_per_second">Best hits per second:</string>
+    <string name="best_time_record">Best time record:</string>
+    <string name="preferences_best_speed" translatable="false">SPEED</string>
 </resources>
