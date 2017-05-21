@@ -21,7 +21,7 @@
     <string name="bpm">увм</string>
     <string name="sense_of_bar_result_good">Поздравляю Вас! Ваше Чувства Такта™ в превосходном состоянии! Советуем попробовать сыграть с другим периодом времени.</string>
     <string name="sense_of_bar_result_average">Тренируйся больше, и ты разовьёшь своё Чувства Такта™! Попробуйте снова.</string>
-    <string name="sense_of_bar_result_bad">Ваше Чувства Такта™ оставляет желать лучшего. Попробуйте уменьшить продолжительность занятия.</string>
+    <string name="sense_of_bar_result_bad">Ваше Чувства Такта™ оставляет желать лучшего. Попробуйте уменьшить период времени или продолжительность занятия.</string>
     <string name="sense_of_bar_name">Кликер Чувства Такта</string>
     <string name="app_name">Комплект Дрессировщика</string>
     <string name="speed_reaction_name">Тест Скорости Реакции</string>
@@ -53,6 +53,6 @@
     <string name="moles_hit_counter">Попаданий по кротам:</string>
     <string name="moles_duration">Прошло секунд:</string>
     <string name="moles_per_second">Ударов по кротам в секунду:</string>
-    <string name="best_moles_per_second">Рекорд скорости ударов по кротам:</string>
+    <string name="best_moles_per_second">Рекорд скорости ударов по кротам в секунду:</string>
     <string name="best_time_record">Рекордное лучшее время:</string>
 </resources>

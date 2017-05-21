@@ -36,9 +36,11 @@ public class Resulter extends AppCompatActivity{
 
         SharedPreferences sharedPref = getSharedPreferences(
                 getString(R.string.preferences), MODE_PRIVATE);
-        long bestTimeEver = sharedPref.getLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId]);
-        if (bestTimeEver >= speedReactionTimes[bestTimeId])
+
+        if (sharedPref.getLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId])
+                >= speedReactionTimes[bestTimeId])
             sharedPref.edit().putLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId]).apply();
+        long bestTimeEver = sharedPref.getLong(getString(R.string.preferences_best_speed), speedReactionTimes[bestTimeId]);
 
         result = result + "\n" + getString(R.string.average_time) + "\n" + getTime(averageTime / speedReactionTimes.length) +
                 "\n\n" + getString(R.string.best_time) + "\n" + getTime(speedReactionTimes[bestTimeId]) +
