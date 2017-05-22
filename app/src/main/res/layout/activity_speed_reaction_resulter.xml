@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:fontFamily="serif"
-        android:onClick="backToThePast"
+        android:onClick="backToMainMainActivity"
         android:text="@string/back_to_the_past_button"
         android:textAllCaps="true" />
 
@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:fontFamily="serif"
-        android:onClick="gottaGetBack"
+        android:onClick="backToMainActivity"
         android:text="@string/gotta_get_back_button"
         android:textAllCaps="true" />
 

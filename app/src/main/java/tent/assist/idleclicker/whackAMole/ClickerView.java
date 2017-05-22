@@ -25,7 +25,7 @@ class ClickerView extends View {
     private int currentMole, duration, counter;
 
     private final int molesAmount = 9;
-    private final int molesWaitTime = 750;
+    private final int molesWaitTime = 250;
     private final int timerInterval = 30;
 
     public ClickerView(Context context) {
@@ -47,7 +47,7 @@ class ClickerView extends View {
         int w = hole.getWidth() / 4;
         int h = hole.getHeight();
         Rect firstFrame = new Rect(0, 0, w, h);
-        mole =new Sprite[molesAmount];
+        mole = new Sprite[molesAmount];
         for (int i = 0; i < molesAmount/3; i++) {
             mole[i*3] = new Sprite(width / 4 * (i + 1) - w / 2, height / 4 - h, firstFrame, hole);
             mole[i*3+1] = new Sprite(width / 4 * (i + 1) - w / 2, height / 4 * 2 - h, firstFrame, hole);

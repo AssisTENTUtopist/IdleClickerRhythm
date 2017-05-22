@@ -6,26 +6,26 @@
 
     <Button
         android:id="@+id/back_to_the_past_button"
-        style="@android:style/Widget.DeviceDefault.Light.Button.Inset"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="backToThePast"
+        android:onClick="backToMainMainActivity"
         android:text="@string/back_to_the_past_button"
         android:typeface="serif" />
 
     <Button
         android:id="@+id/gotta_get_back_button"
-        style="@android:style/Widget.DeviceDefault.Button.Inset"
+        style="@android:style/Widget.Button.Inset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:onClick="gottaGetBack"
-        android:text="@string/gotta_get_back_button"
-        android:typeface="serif"
         android:layout_above="@+id/back_to_the_past_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:onClick="backToMainActivity"
+        android:text="@string/gotta_get_back_button"
+        android:typeface="serif" />
 
     <TextView
         android:id="@+id/timeView"

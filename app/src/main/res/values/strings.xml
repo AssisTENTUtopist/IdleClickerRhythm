@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Handler Kit</string>
+    <string name="app_name">Motility Masterliness</string>
     <string name="sense_of_bar_name">Sense of Bar Clicker</string>
     <string name="speed_reaction_name">Speed Reaction Test</string>
     <string name="tap_button">Tap</string>
     <string name="set_results_button">Tap to set results</string>
-    <string name="gotta_get_back_button">Repeat?</string>
-    <string name="back_to_the_past_button">Get back?</string>
+    <string name="gotta_get_back_button">Repeat</string>
+    <string name="back_to_the_past_button">Get back</string>
     <string name="real_beats">Beats passed:</string>
     <string name="expected_beats">Your beats:</string>
     <string name="set_time_period_hint">Set time period (in bpm)</string>
@@ -59,4 +59,5 @@
     <string name="best_moles_per_second">Best hits per second:</string>
     <string name="best_time_record">Best time record:</string>
     <string name="preferences_best_speed" translatable="false">SPEED</string>
+    <string name="warning">It is not just for fun. Wait. Do not press the button when it is not red</string>
 </resources>

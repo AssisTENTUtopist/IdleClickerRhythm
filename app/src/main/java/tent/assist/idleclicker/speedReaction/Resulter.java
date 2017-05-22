@@ -44,24 +44,18 @@ public class Resulter extends AppCompatActivity{
 
         result = result + "\n" + getString(R.string.average_time) + "\n" + getTime(averageTime / speedReactionTimes.length) +
                 "\n\n" + getString(R.string.best_time) + "\n" + getTime(speedReactionTimes[bestTimeId]) +
-                "\n\n" + getString(R.string.best_time_record) + getTime(bestTimeEver);
+                "\n\n" + getString(R.string.best_time_record) + "\n" + getTime(bestTimeEver);
 
         timeView.setText(result);
     }
 
-    public void gottaGetBack(View view) {
+    public void backToMainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void backToThePast(View view) {
+    public void backToMainMainActivity(View view) {
         Intent intent = new Intent(this, MainMainActivity.class);
         startActivity(intent);
     }
-
-    /*
-    public void samuraiJack(View view) {
-        Toast.makeText(this, "Dab", Toast.LENGTH_SHORT).show();
-    }
-    */
 }

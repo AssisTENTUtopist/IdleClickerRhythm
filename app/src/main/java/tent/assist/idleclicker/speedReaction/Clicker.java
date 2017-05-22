@@ -1,17 +1,21 @@
 package tent.assist.idleclicker.speedReaction;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import tent.assist.idleclicker.R;
 
 import static tent.assist.idleclicker.R.*;
 import static tent.assist.idleclicker.R.color.*;
 
 public class Clicker extends AppCompatActivity {
-    Button butt;
+    Button button;
     int attempts = 1;
     long randomStartTime = 0;
     long speedReactionTime = 0;
@@ -30,22 +34,22 @@ public class Clicker extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_speed_reaction_clicker);
-        butt = (Button) findViewById(id.speed_react_clicker_button);
+        button = (Button) findViewById(id.speed_react_clicker_button);
         attempts = (int) getIntent().getSerializableExtra("ATM");
         speedReactionTimes = new long[attempts];
 
-        View.OnClickListener buttSlap = new View.OnClickListener() {
+        View.OnClickListener onButtonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (timeToPress) {
                     timeToPress = false;
-                    speedReactionTime = SystemClock.elapsedRealtime() - speedReactionTime;
+                    speedReactionTime = System.currentTimeMillis() - speedReactionTime;
                     attempts--;
                     speedReactionTimes[attempts] = speedReactionTime;
-                    butt.setBackgroundColor(getResources().getColor(colorVeryClose));
+                    button.setBackgroundColor(Color.rgb(0, 170, 0));
                     if (attempts < 1) setResults(v);
-                    else butt.setText(string.wait);
-                }
+                    else button.setText(string.wait);
+                } else Toast.makeText(Clicker.this, getText(string.warning), Toast.LENGTH_SHORT).show();
             }
         };
 
@@ -54,7 +58,7 @@ public class Clicker extends AppCompatActivity {
                 while (attempts > 0) {
                     if (!timeToPress) {
                         try {
-                            randomStartTime = (long) (Math.random() * 10000);
+                            randomStartTime = (long) (Math.random() * 5000) + 2000;
                             Thread.sleep(randomStartTime);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
@@ -63,16 +67,16 @@ public class Clicker extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                butt.setBackgroundColor(getResources().getColor(colorTooFar));
-                                butt.setText(string.tap_button);
+                                button.setBackgroundColor(Color.rgb(170, 0, 0));
+                                button.setText(string.tap_button);
                             }
                         });
-                        speedReactionTime = SystemClock.elapsedRealtime();
+                        speedReactionTime = System.currentTimeMillis();
                     }
                 }
             }
         }.start();
 
-        butt.setOnClickListener(buttSlap);
+        button.setOnClickListener(onButtonClickListener);
     }
 }

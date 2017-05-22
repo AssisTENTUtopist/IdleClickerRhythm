@@ -10,22 +10,21 @@ import android.widget.TextView;
 import tent.assist.idleclicker.speedReaction.MainActivity;
 
 public class MainMainActivity extends AppCompatActivity {
-    private Button[] butts;
+    private Button[] buttons;
     private TextView info;
-    public static final int ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING = 42;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         info = (TextView) findViewById(R.id.textView2);
-        butts = new Button[3];
-        butts[0] = (Button) findViewById(R.id.sense_of_bar_button);
-        butts[1] = (Button) findViewById(R.id.speed_reaction_button);
-        butts[2] = (Button) findViewById(R.id.whack_a_mole_button);
+        buttons = new Button[3];
+        buttons[0] = (Button) findViewById(R.id.sense_of_bar_button);
+        buttons[1] = (Button) findViewById(R.id.speed_reaction_button);
+        buttons[2] = (Button) findViewById(R.id.whack_a_mole_button);
         String intro = getString(R.string.introduction);
         info.setText(intro);
 
-        for (int i = 0; i < butts.length; i++) {
+        for (int i = 0; i < buttons.length; i++) {
             switch (i) {
                 case 0:
                     intro = getString(R.string.sense_of_bar_intro);
@@ -38,7 +37,7 @@ public class MainMainActivity extends AppCompatActivity {
                     break;
             }
             final String finalIntro = intro;
-            butts[i].setOnLongClickListener(new View.OnLongClickListener() {
+            buttons[i].setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     info.setText(finalIntro);

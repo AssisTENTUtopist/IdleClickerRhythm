@@ -22,10 +22,8 @@ public class Resulter extends AppCompatActivity {
                 getString(R.string.preferences), MODE_PRIVATE);
 
         TextView counterView = (TextView) findViewById(R.id.counterView);
-        int defaultValue = 0;
-        int counter = sharedPref.getInt(getString(R.string.preferences_counter), defaultValue);
-        defaultValue = 10000;
-        int duration = sharedPref.getInt(getString(R.string.preferences_duration), defaultValue) / 1000;
+        int counter = sharedPref.getInt(getString(R.string.preferences_counter), 0);
+        int duration = sharedPref.getInt(getString(R.string.preferences_duration), 10000) / 1000;
         float defaultFloatValue = (float)counter/duration;
         if (sharedPref.getFloat(getString(R.string.preferences_best_moles), defaultFloatValue) <= defaultFloatValue)
             sharedPref.edit().putFloat(getString(R.string.preferences_best_moles), defaultFloatValue).apply();
@@ -36,19 +34,13 @@ public class Resulter extends AppCompatActivity {
                 sharedPref.getFloat(getString(R.string.preferences_best_moles), defaultFloatValue)));
     }
 
-    public void gottaGetBack(View view) {
+    public void backToMainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-    public void backToThePast(View view) {
+    public void backToMainMainActivity(View view) {
         Intent intent = new Intent(this, MainMainActivity.class);
         startActivity(intent);
     }
-
-    /*
-    public void samuraiJack(View view) {
-        Toast.makeText(this, "Dab", Toast.LENGTH_SHORT).show();
-    }
-    */
 }

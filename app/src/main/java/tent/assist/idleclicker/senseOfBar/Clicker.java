@@ -1,17 +1,17 @@
 package tent.assist.idleclicker.senseOfBar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import tent.assist.idleclicker.MainMainActivity;
 import tent.assist.idleclicker.R;
 
 public class Clicker extends AppCompatActivity {
     boolean isAlive;
-    Button butt;
+    Button button;
     int counter = 0;
     int unitOfTime = 0;
     long period = 0;
@@ -31,9 +31,9 @@ public class Clicker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sense_of_bar_clicker);
         isAlive = true;
-        butt = (Button) findViewById(R.id.button);
+        button = (Button) findViewById(R.id.button);
 
-        View.OnClickListener buttSlap = new View.OnClickListener() {
+        View.OnClickListener onButtonClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 counter++;
@@ -52,7 +52,7 @@ public class Clicker extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    butt.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                                    button.setBackgroundColor(Color.argb(0, 255, 255, 255));
                                 }
                             });
                             example++;
@@ -62,7 +62,7 @@ public class Clicker extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    butt.setBackgroundColor(getResources().getColor(R.color.colorVeryClose));
+                                    button.setBackgroundColor(Color.rgb(0, 170, 0));
                                 }
                             });
                         }
@@ -76,6 +76,6 @@ public class Clicker extends AppCompatActivity {
             }
         }.start();
 
-        butt.setOnClickListener(buttSlap);
+        button.setOnClickListener(onButtonClickListener);
     }
 }
