@@ -25,7 +25,7 @@ class ClickerView extends View {
     private int currentMole, duration, counter;
 
     private final int molesAmount = 9;
-    private final int molesWaitTime = 250;
+    private final int molesWaitTime = 420;
     private final int timerInterval = 30;
 
     public ClickerView(Context context) {
